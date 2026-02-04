@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import Header from './Header'
+
 import React, { useContext } from "react";
 import { IoHomeOutline } from "react-icons/io5";
 import { GrProjects } from "react-icons/gr";
@@ -13,14 +14,22 @@ import { MenuContext } from '@/context/MenuContext';
 
 const MainLayout = ({ children }) => {
   
-  const {open}= useContext(MenuContext);
+  const { open }= useContext(MenuContext);
 
   return (
     <div className='bg-gray-100 w-full min-h-screen'>
       <Header />
       <div className='flex justify-start items-start'>
-        {/*className='bg-white rounded-lg w-60 p-4'*/}
-        <aside className={`bg-white rounded-lg ${open ? "w-60 p-4" : "w.0"}`}>
+        {/*className='bg-white rounded-lg w-60 p-4'
+        transition-all -->
+        for hidde border "overflow-hidden"
+        md: = “apply this style on medium screens and up”
+        
+        */}
+
+        <aside className={`bg-white rounded-lg   overflow-hidden transition-all duration-500 ${open ? "w-60 p-4 " : "w-0"
+
+        } `}>
           <ul>
             <li className='flex justify-start items-center text-black hover:bg-blue-200 hover:text-blue-800 rounded-xl  p-2'>
               <IoHomeOutline className='mr-2' />
@@ -30,7 +39,8 @@ const MainLayout = ({ children }) => {
             </li>
             <li className='flex justify-start items-center text-black hover:bg-blue-200 rounder-2 hover:text-blue-800 rounded-xl  p-2'>
               <GrProjects className='mr-2' />
-              <h3 className='flex-1'>Projects</h3>
+              <Link href="./projects" className='flex-1'><h3>Projects</h3></Link>
+              
               <FaAngleRight />
 
 
@@ -56,7 +66,7 @@ const MainLayout = ({ children }) => {
             <li className='flex justify-start items-center text-black hover:bg-blue-200 rounder-2 hover:text-blue-800 rounded-xl  p-2'>
               <FcAbout className='mr-2' />
 
-              <h3 className='flex-1'>About us</h3>
+              <Link href='/about-us'><h3 className='flex-1'>About us</h3></Link>
 
 
 
@@ -65,7 +75,7 @@ const MainLayout = ({ children }) => {
             <li className='flex justify-start items-center text-black hover:bg-blue-200 rounder-2 hover:text-blue-800 rounded-xl  p-2'>
               <IoIosContacts className='mr-2' />
 
-              <h3 className='flex-1'>Contact us</h3>
+              <Link href ='./contact' className='flex-1'><h3 >Contact us</h3></Link>
 
 
 
