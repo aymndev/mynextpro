@@ -1,6 +1,7 @@
 
 import MainLayout from "./components/MainLayout";
 import "./globals.css";
+import MenuContextProvider from "@/context/MenuContext";
 
 
 
@@ -17,8 +18,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <MenuContextProvider>
 
-        <MainLayout>{ children }</MainLayout>
+            <MainLayout>{ children }</MainLayout>
+
+        </MenuContextProvider>
+
+
 
 
       </body>
