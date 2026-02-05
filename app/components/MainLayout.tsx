@@ -27,7 +27,7 @@ const MainLayout = ({ children }) => {
         
         */}
 
-        <aside className={`bg-white rounded-lg h-170  overflow-hidden transition-all duration-500 ${open ? "w-60 p-4 " : "w-0"
+        <aside className={`bg-white rounded-lg h-180  overflow-hidden transition-all duration-500 ${open ? "w-60 p-4 " : "w-0"
 
         } `}>
           <ul>

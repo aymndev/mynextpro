@@ -4,6 +4,7 @@ import Image from "next/image";
 import { FaShoppingBasket } from "react-icons/fa";
 import { useContext, useState } from "react"
 import { IoIosArrowDown } from "react-icons/io";
+import DrawerBaskit from "./components/DrawerBaskit";
 
 
 export default function Home() {
@@ -34,7 +35,7 @@ export default function Home() {
         <button className=" rounded-r-[5px] bg-black text-gray-50 p-1">Search</button>
       </div>
       <div>
-        <FaShoppingBasket size={27} className="h-9 ml-[120px]" />
+        <DrawerBaskit/>
 
       </div>
 
