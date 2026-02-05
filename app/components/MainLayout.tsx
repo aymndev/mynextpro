@@ -27,7 +27,7 @@ const MainLayout = ({ children }) => {
         
         */}
 
-        <aside className={`bg-white rounded-lg   overflow-hidden transition-all duration-500 ${open ? "w-60 p-4 " : "w-0"
+        <aside className={`bg-white rounded-lg h-170  overflow-hidden transition-all duration-500 ${open ? "w-60 p-4 " : "w-0"
 
         } `}>
           <ul>
@@ -45,7 +45,7 @@ const MainLayout = ({ children }) => {
 
 
             </li>
-            <li className='flex justify-start items-center text-black hover:bg-blue-200 rounder-2 hover:text-blue-800 rounded-xl  p-2'>
+            <li className='flex justify-start items-center  text-black hover:bg-blue-200 rounder-2 hover:text-blue-800 rounded-xl  p-2'>
               <FaCheck className='mr-2' />
 
               <h3 className='flex-1'>Singule</h3>
