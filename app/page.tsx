@@ -5,22 +5,23 @@ import { FaShoppingBasket } from "react-icons/fa";
 import { useContext, useState } from "react"
 import { IoIosArrowDown } from "react-icons/io";
 import DrawerBaskit from "./components/DrawerBaskit";
+import ProductCard from "./components/ProductCard";
 
 
 export default function Home() {
   const [input, setIinput] = useState("");
   const { open } = useContext(MenuContext);
   return (
-    <div className={`rounded-[19px] ml-5 mr-5 pt-5 flex  justify-center bg-gray-200 h-360 w-370 ${open ? "w-370" : "w-418 ml-5"}`}>
+    <div className={`rounded-[19px] ml-5 mr-5 pt-5 flex flex-row justify-center bg-gray-200 h-360 w-370 ${open ? "w-370" : "w-418 ml-5"}`}>
 
-      <div>
+      <div className=" ">
         <button className=" rounded-[5px] bg-black text-gray-50 p-1 items-center mr-[120px] h-9">
           Category
           <span>
-            
-                <IoIosArrowDown className="inline-block align-middle ml-5 " />
-            
-            
+
+            <IoIosArrowDown className="inline-block align-middle ml-5 " />
+
+
 
           </span>
         </button>
@@ -32,12 +33,24 @@ export default function Home() {
 
 
         />
+
         <button className=" rounded-r-[5px] bg-black text-gray-50 p-1">Search</button>
-      </div>
-      <div>
-        <DrawerBaskit/>
+        <div className="flex justify-center items-center">
+
+          <ProductCard />
+
+
+        </div>
 
       </div>
+
+      <div>
+          <DrawerBaskit />
+
+      </div>
+
+
+
 
 
 
