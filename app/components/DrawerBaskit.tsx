@@ -8,7 +8,7 @@ export default function DrawerBaskit() {
         <div className=''>
             <Drawer direction='left'>
                 <DrawerTrigger className='text-black px-3 py-2 text-center'>
-                    <FaShoppingBasket size={27} className="h-9 ml-[120px]" />
+                    <FaShoppingBasket size={25} className=" ml-[120px]" />
                 </DrawerTrigger>
                 <DrawerContent className='w-1/2 h-full fixed bg-white shadow-lg'>
                     <DrawerHeader>
