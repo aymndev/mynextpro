@@ -49,34 +49,34 @@ git clone <your-repo-url>
 `#or pnpm install`
 ```
 # Project Structure
-
+```
 nextjs-project/
 ├── app/
-│   ├── components/       # Reusable React components
+│   ├── components/      
 │   │   ├── Header.tsx
 │   │   ├── MainLayout.tsx
 │   │   ├── ProductCard.tsx
 │   │   ├── Dropdown.tsx
 │   │   └── DrawerBaskit.tsx
-│   ├── lib/             # Utility functions and API calls
+│   ├── lib/            
 │   │   └── api.js
-│   └── pages/           # Optional if you use /pages folder for routes
-├── context/             # React Context providers
+│   └── pages/          
+├── context/             
 │   ├── MenuContext.tsx
 │   └── CartContext.tsx
-├── public/              # Static assets like images, icons, fonts
+├── public/              
 │   ├── images/
 │   └── favicon.ico
-├── styles/              # Global CSS / Tailwind config
+├── styles/             
 │   ├── globals.css
 │   └── tailwind.config.js
-├── node_modules/        # Auto-generated, do NOT commit
-├── .gitignore           # Ignore node_modules and other files
-├── package.json         # Project dependencies
-├── next.config.js       # Next.js configuration
-├── README.md            # Project documentation
-└── ...                  # Any other configs (eslint, prettier, etc.)
-
+├── node_modules/       
+├── .gitignore          
+├── package.json         
+├── next.config.js      
+├── README.md           
+└── ...                  
+```
 
 
 
