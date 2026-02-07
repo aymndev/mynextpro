@@ -44,7 +44,7 @@ export default function ProductCard() {
                         <h2 className='flex justify-center text-xl pt-t font-bold'>{product.title}</h2>
                         <div className='flex pb-9 justify-between gap-2 pt-5' >
                             <p className='text-lg font-bold'>Price: ${product.price}</p>
-                            <button className='bg-gray-500 text-white rounded-[10px] p-1 ml-5 hover:bg-gray-600 shadow-2xl'>
+                            <button className='bg-gray-500 text-white rounded-[10px] p-1 ml-5 hover:bg-gray-600 hover:shadow-2xl'>
                                 Add to card
                             </button>
 
