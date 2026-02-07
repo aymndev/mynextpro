@@ -13,21 +13,16 @@ Custom hooks for reusable logic
 
 The project is designed with a user-centric experience, featuring responsive layouts, smooth animations, and accessible UI components. Products are fetched from an external API (DummyJSON), simulating a real-world e-commerce environment.
 # Features
-Product Catalog with images, titles, and prices
-
-Shopping Cart with real-time updates
-
-Responsive Design (desktop & mobile)
-
-Sidebar Navigation (collapsible menu)
-
-Product Search & Category Filtering
-
-Cart Drawer with add/remove items functionality
-
-Product Cards with hover animations
-
-Smooth Animations and transitions
+| Feature                              | Description                                                        |
+|--------------------------------------|--------------------------------------------------------------------|
+| Product Catalog                       | Display products with images, titles, and prices.                  |
+| Shopping Cart                         | Add/remove items with real-time updates.                            |
+| Responsive Design                     | Works smoothly on desktop and mobile devices.                      |
+| Sidebar Navigation                    | Collapsible menu for easy navigation.                              |
+| Product Search & Category Filtering   | Search products and filter by categories.                          |
+| Cart Drawer                            | Drawer showing cart items with add/remove functionality.           |
+| Product Cards                          | Product cards with hover animations for better UX.                 |
+| Smooth Animations & Transitions       | Nice transitions throughout the app for smooth interactions.       |
 # Technologies Used
 Next.js 16.1.6 – React framework with App Router
 
