@@ -48,7 +48,7 @@ git clone <your-repo-url>
 `#or yarn install`
 `#or pnpm install`
 ```
-# Recommended GitHub Project Structure
+# Project Structure
 
 nextjs-project/
 ├── app/
