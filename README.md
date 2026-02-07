@@ -46,8 +46,10 @@ Vaul – Drawer component library
 Context API – State management for cart and menu
 
 # Installation
+```
 git clone <your-repo-url>
 `cd nextjs-project`
 `npm install`
 `#or yarn install`
 `#or pnpm install`
+```
