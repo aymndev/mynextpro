@@ -1,8 +1,8 @@
-
+import type { Metadata } from "next";
 import MainLayout from "./components/MainLayout";
 import "./globals.css";
 import MenuContextProvider from "@/context/MenuContext";
-
+import CardContextProvider from "@/context/CardContext";
 
 
 export const metadata: Metadata = {
@@ -19,8 +19,12 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <MenuContextProvider>
+          <CardContextProvider>
 
-            <MainLayout>{ children }</MainLayout>
+              <MainLayout>{ children }</MainLayout>
+          </CardContextProvider>
+
+            
 
         </MenuContextProvider>
 

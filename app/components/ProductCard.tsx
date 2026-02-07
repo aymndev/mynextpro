@@ -1,13 +1,14 @@
 "use client"
-import React, { useEffect } from 'react'
+import React, { useEffect, useContext } from 'react'
 import { useState } from 'react'
 import { getData } from "../lib/api"
-
+import { CardContext } from '@/context/CardContext';
 
 import { IoMdHeartEmpty } from "react-icons/io";
 
 export default function ProductCard() {
     const [products, setProducts] = useState([]);
+    const { addToCard } = useContext(CardContext);
 
     useEffect(() => {
         getData().then((data) => {
@@ -44,8 +45,11 @@ export default function ProductCard() {
                         <h2 className='flex justify-center text-xl pt-t font-bold'>{product.title}</h2>
                         <div className='flex pb-9 justify-between gap-2 pt-5' >
                             <p className='text-lg font-bold'>Price: ${product.price}</p>
-                            <button className='bg-gray-500 text-white rounded-[10px] p-1 ml-5 hover:bg-gray-600 hover:shadow-2xl'>
-                                Add to card
+                            <button 
+                            onClick={()=>addToCard(product)}
+                            
+                            className='bg-gray-500 text-white rounded-[10px] p-1 ml-5 hover:bg-gray-600 hover:shadow-2xl'>
+                                Add to cart
                             </button>
 
                         </div>
