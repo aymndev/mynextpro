@@ -48,3 +48,39 @@ git clone <your-repo-url>
 `#or yarn install`
 `#or pnpm install`
 ```
+# Recommended GitHub Project Structure
+
+nextjs-project/
+├── app/
+│   ├── components/       # Reusable React components
+│   │   ├── Header.tsx
+│   │   ├── MainLayout.tsx
+│   │   ├── ProductCard.tsx
+│   │   ├── Dropdown.tsx
+│   │   └── DrawerBaskit.tsx
+│   ├── lib/             # Utility functions and API calls
+│   │   └── api.js
+│   └── pages/           # Optional if you use /pages folder for routes
+├── context/             # React Context providers
+│   ├── MenuContext.tsx
+│   └── CartContext.tsx
+├── public/              # Static assets like images, icons, fonts
+│   ├── images/
+│   └── favicon.ico
+├── styles/              # Global CSS / Tailwind config
+│   ├── globals.css
+│   └── tailwind.config.js
+├── node_modules/        # Auto-generated, do NOT commit
+├── .gitignore           # Ignore node_modules and other files
+├── package.json         # Project dependencies
+├── next.config.js       # Next.js configuration
+├── README.md            # Project documentation
+└── ...                  # Any other configs (eslint, prettier, etc.)
+
+
+
+
+
+
+
+
