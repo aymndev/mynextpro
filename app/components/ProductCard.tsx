@@ -4,9 +4,10 @@ import { useState } from 'react'
 import { getData } from "../lib/api"
 import { CardContext } from '@/context/CardContext';
 
+
 import { IoMdHeartEmpty } from "react-icons/io";
 
-export default function ProductCard() {
+export default function ProductCard({ searchTerm, category }) {
     const [products, setProducts] = useState([]);
     const { addToCard } = useContext(CardContext);
 
@@ -20,12 +21,17 @@ export default function ProductCard() {
 
     }, []);
 
+    const filteredProducts = products.filter(product =>
+        (category === "All" || product.category === category) &&
+        product.title.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+
 
     return (
 
         <div className='grid grid-cols-4 gap-6 '>
-            
-            {products.map((product) => (
+
+            {filteredProducts.map((product) => (
                 <div key={product.id} className=' relative flex flex-col rounded-[15]  shadow-lg mb-5 items-center hover:shadow-2xl hover:scale-105 transition-all'>
                     <div className='absolute flex  top-2  right-[60px]'>
                             <IoMdHeartEmpty width={500} height={50} className='absolute top-2 text-3xl text-white bg-black  rounded-full p-1 ' />
@@ -45,6 +51,7 @@ export default function ProductCard() {
                         <h2 className='flex justify-center text-xl pt-t font-bold'>{product.title}</h2>
                         <div className='flex pb-9 justify-between gap-2 pt-5' >
                             <p className='text-lg font-bold'>Price: ${product.price}</p>
+                            <p>{product.category}</p>
                             <button 
                             onClick={()=>addToCard(product)}
                             
