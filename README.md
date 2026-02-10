@@ -1,8 +1,8 @@
-# Next.js E-Commerce Store 🛍️
+# Next.js E-Commerce Store 
 
 A modern, full-featured e-commerce platform built with Next.js 16, featuring a beautiful orange and black theme, shopping cart functionality, and a professional store layout.
 
-## 🎯 Description
+##  Description
 
 The Next.js E-Commerce Project is a full-featured online shopping platform that allows users to browse products, manage a shopping cart, and interact with a dynamic interface.
 
@@ -19,25 +19,25 @@ The project is designed with a user-centric experience, featuring responsive lay
 
 | Feature                              | Description                                                        |
 |--------------------------------------|--------------------------------------------------------------------|
-| 🏠 **Home Page**                     | Hero section with search and featured products                    |
-| 🛒 **Shopping Cart**                 | Add/remove items with real-time updates and animations            |
-| 🏪 **Shop Page**                     | Dedicated page to browse all products                             |
-| 📂 **Categories Page**               | Browse products by category with interactive cards                |
-| 🔥 **Deals Page**                    | Hot deals showing products with 10%+ discounts                    |
-| ℹ️ **About Us Page**                 | Professional company information with feature highlights          |
-| 📞 **Contact Page**                  | Working contact form with contact information                     |
-| 🔍 **Product Search**                | Real-time search filtering across all products                    |
-| 🏷️ **Category Filtering**            | Filter products by category dynamically                           |
-| 📱 **Responsive Design**             | Fully responsive on mobile, tablet, and desktop                   |
-| 🎨 **Orange & Black Theme**          | Consistent modern color scheme throughout                         |
-| 🎭 **Smooth Animations**             | Hover effects, transitions, and slide animations                  |
-| 🗂️ **Sidebar Navigation**            | Collapsible menu with store-specific pages                        |
-| 💳 **Cart Drawer**                   | Slide-out drawer showing cart items with remove animation         |
-| 🖼️ **Product Cards**                 | Beautiful cards with images, prices, and discount badges          |
-| ⚡ **Loading States**                | Loading indicators for better UX                                  |
-| ❌ **Error Handling**                | Graceful error messages and fallbacks                             |
+|  **Home Page**                     | Hero section with search and featured products                    |
+|  **Shopping Cart**                 | Add/remove items with real-time updates and animations            |
+|  **Shop Page**                     | Dedicated page to browse all products                             |
+|  **Categories Page**               | Browse products by category with interactive cards                |
+| **Deals Page**                    | Hot deals showing products with 10%+ discounts                    |
+|  **About Us Page**                 | Professional company information with feature highlights          |
+|  **Contact Page**                  | Working contact form with contact information                     |
+|  **Product Search**                | Real-time search filtering across all products                    |
+|  **Category Filtering**            | Filter products by category dynamically                           |
+|  **Responsive Design**             | Fully responsive on mobile, tablet, and desktop                   |
+|  **Orange & Black Theme**          | Consistent modern color scheme throughout                         |
+|  **Smooth Animations**             | Hover effects, transitions, and slide animations                  |
+|  **Sidebar Navigation**            | Collapsible menu with store-specific pages                        |
+|  **Cart Drawer**                   | Slide-out drawer showing cart items with remove animation         |
+|  **Product Cards**                 | Beautiful cards with images, prices, and discount badges          |
+|  **Loading States**                | Loading indicators for better UX                                  |
+|  **Error Handling**                | Graceful error messages and fallbacks                             |
 
-## 🛠️ Technologies Used
+##  Technologies Used
 
 - **Next.js 16.1.6** – React framework with App Router
 - **React 19.2.3** – UI library with hooks
@@ -49,7 +49,7 @@ The project is designed with a user-centric experience, featuring responsive lay
 - **Context API** – State management for cart and menu
 - **DummyJSON API** – External API for product data
 
-## 🚀 Installation
+##  Installation
 
 ```bash
 # Clone the repository
