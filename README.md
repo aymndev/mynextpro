@@ -80,6 +80,7 @@ pnpm dev
 
 npm run build
 npm start
+```
 # Project Structure
 ```
 nextjs-project/
