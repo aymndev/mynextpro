@@ -15,7 +15,7 @@ It demonstrates modern React patterns such as:
 
 The project is designed with a user-centric experience, featuring responsive layouts, smooth animations, and accessible UI components. Products are fetched from an external API (DummyJSON), simulating a real-world e-commerce environment.
 
-## ✨ Features
+##  Features
 
 | Feature                              | Description                                                        |
 |--------------------------------------|--------------------------------------------------------------------|
