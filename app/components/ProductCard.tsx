@@ -51,7 +51,7 @@ export default function ProductCard({ searchTerm, category }) {
                         <h2 className='flex justify-center text-xl pt-t font-bold'>{product.title}</h2>
                         <div className='flex pb-9 justify-between gap-2 pt-5' >
                             <p className='text-lg font-bold'>Price: ${product.price}</p>
-                            <p>{product.category}</p>
+                            
                             <button 
                             onClick={()=>addToCard(product)}
                             

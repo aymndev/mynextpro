@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <MenuContextProvider>
+        <MenuContextProvider >
           <CardContextProvider>
 
               <MainLayout>{ children }</MainLayout>

@@ -1,12 +1,24 @@
 "use client";
 
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
+
 import { CardContext } from "@/context/CardContext";
 
 export default function Dropdown({ buttonText, children }) {
     const [open, setOpen] = useState(false);
-    const { card } = useContext(CardContext);
 
+
+    const { card } = useContext(CardContext);
+    const {removeFromCard}=useContext(CardContext);
+    const [removingId, setRemovingId] = useState(null);
+
+    const handleRemove = (product) => {
+        setRemovingId(product.id);
+        setTimeout(() => {
+            removeFromCard(product);
+            setRemovingId(null);
+        }, 300); // Wait for animation to complete
+    };
     return (
         <>
             {/* Button */}
@@ -40,25 +52,39 @@ export default function Dropdown({ buttonText, children }) {
                 </button>
 
                 {/* Content */}
-                <div className="p-4">
+                <div className="p-4 max-h-full overflow-y-auto touch-pan-y">
                     <h2 className="text-2xl font-bold mb-4">Your Cart</h2>
                     {card.length === 0 ? (
                         <p>Your cart is empty</p>
                     ) : (
                         <div className="space-y-4">
                             {card.map((product, index) => (
-                                <div key={index} className="flex gap-4 border-b pb-4">
+                                <div
+                                    key={index}
+                                    className={`flex gap-5 border-b pb-4 transition-all duration-300 ${
+                                        removingId === product.id
+                                            ? 'opacity-0 -translate-x-full'
+                                            : 'opacity-100 translate-x-0'
+                                    }`}
+                                >
                                     <img
+
                                         src={product.images[0]}
                                         alt={product.title}
                                         width={80}
                                         height={80}
-                                        className="rounded"
+                                        className="rounded bg-gradient-to-b from-gray-200  to-stone-600 shadow-lg  object-cover rounded-xl"
                                     />
                                     <div className="flex-1">
                                         <h3 className="font-semibold">{product.title}</h3>
                                         <p className="text-gray-600">${product.price}</p>
                                     </div>
+                                    <button
+                                        onClick={() => handleRemove(product)}
+                                        className="text-red-500 hover:text-red-700"
+                                    >
+                                        Delete
+                                    </button>
                                 </div>
                             ))}
                         </div>

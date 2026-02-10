@@ -25,7 +25,7 @@ export default function Home() {
     <div className={`rounded-[19px] ml-1 mr-3 pt-2 flex flex-row justify-center bg-gray-50 h-auto w-370 ${open ? "w-370 pl-5" : "w-418 "}`}>
 
       <div className=" pr-5 pl-5 justify-between flex flex-col">
-        <div className="flex p-5 justify-center  mb-51">
+        <div className="flex p-5 justify-center  mb-0">
           {/*<button className=" rounded-[5px] bg-gray-500 hover:bg-gray-600  text-white mr-[90px] m-1 pb-1 pr-5 pl-5 h-9 font-bold">
             Category
             <span>
@@ -51,14 +51,18 @@ export default function Home() {
           <button className=" rounded-r-[5px] bg-gray-500 hover:bg-gray-600 color-black text-white p-2  font-bold">Search</button>
           <div className="ml-25">
             {/*<DrawerBaskit />*/}
-            <Dropdown buttonText={<FaShoppingBasket size={20} />}>
+            <Dropdown buttonText={<FaShoppingBasket size={23} />}/>
 
-            </Dropdown>
+            
 
 
           </div>
+          
         </div>
+         <hr className="border-black full-w my-6 border-0.5 mb-9"/>
         <div className=" flex bg-white ">
+         
+          
 
           <ProductCard searchTerm={input} category={category} />
 

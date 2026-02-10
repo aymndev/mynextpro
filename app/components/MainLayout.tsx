@@ -11,6 +11,7 @@ import { FaCheck, FaCheckDouble } from "react-icons/fa";
 import { IoIosContacts } from "react-icons/io";
 import { FcAbout } from "react-icons/fc";
 import { MenuContext } from '@/context/MenuContext';
+import Clinet from "./Clinet"
 
 const MainLayout = ({ children }) => {
   
@@ -23,11 +24,11 @@ const MainLayout = ({ children }) => {
         {/*className='bg-white rounded-lg w-60 p-4'
         transition-all -->
         for hidde border "overflow-hidden"
-        md: = “apply this style on medium screens and up”
+        md: = “apply this style onsticky top-0 medium screens and up”
         
         */}
 
-        <aside className={`bg-white rounded-lg h-180  overflow-hidden transition-all duration-500 ${open ? "w-60 p-4 " : "w-0"
+        <aside className={`sticky top-0 bg-white rounded-lg h-180  overflow-hidden transition-all duration-500 ${open ? "w-60 p-4 " : "w-0"
 
         } `}>
           <ul>
@@ -76,12 +77,17 @@ const MainLayout = ({ children }) => {
               <IoIosContacts className='mr-2' />
 
               <Link href ='./contact' className='flex-1'><h3 >Contact us</h3></Link>
+              <div>
+
+
+              </div>
 
 
 
 
             </li>
           </ul>
+          <Clinet />
         </aside>
         <main className='flex'>
           {children}
