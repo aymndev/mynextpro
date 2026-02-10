@@ -64,14 +64,20 @@ yarn install
 pnpm install        
 ```
 
+
 # Development mode
+```
+
 npm run dev
 # or
 yarn dev
 # or
 pnpm dev
+ ```
 
 # Production build
+```
+
 npm run build
 npm start
 # Project Structure
