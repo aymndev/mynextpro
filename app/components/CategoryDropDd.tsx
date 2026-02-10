@@ -23,23 +23,21 @@ export default function CategoryDropDd({ onCategoryChange }) {
 
     return (
         <div className='relative '>
-            <div className='flex  bg-gray-500  rounded-sm items-center gap-5 p-2 mr-5'>
+            <div className='flex items-center mr-5'>
                 <button
-
-                    className=' rounded-sm text-white  bg-gray-500 hover:bg-gray-600 flex items-center gap-1'
-
+                    onClick={() => setOpen(!open)}
+                    className='bg-black hover:bg-gray-500 text-white p-2 font-bold rounded-[5px] flex items-center gap-2'
                 >
                     {selectedCategory}
+                    <IoIosArrowDown />
                 </button>
-                <span className='text-sm text-white'><IoIosArrowDown  onClick={() => setOpen(!open)}/></span>
-
             </div>
 
             {open && (
                 <div className='absolute left-0 top-full w-60 bg-white border border-gray-300 rounded-lg shadow-lg z-50 max-h-96 overflow-y-auto'>
                     <ul className='p-2'>
                         <li
-                            className='py-1 px-3 hover:bg-gray-100 rounded-lg cursor-pointer'
+                            className='py-1 px-3 bg-black hover:bg-gray-500 text-white font-bold rounded-lg cursor-pointer'
                             onClick={() => handleCategoryClick("All")}
                         >
                             All

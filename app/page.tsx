@@ -7,8 +7,6 @@ import { useContext, useEffect, useState } from "react"
 import { IoIosArrowDown } from "react-icons/io";
 import DrawerBaskit from "./components/DrawerBaskit";
 import ProductCard from "./components/ProductCard";
-import Dropdown from "./components/Dropdown";
-import { FaShoppingBasket } from "react-icons/fa";
 import CategoryDropDd from "./components/CategoryDropDd";
 
 
@@ -21,55 +19,45 @@ export default function Home() {
   const handleCategoryChange = (selectedCategory) => {
     setCategory(selectedCategory);
   };
+
   return (
-    <div className={`rounded-[19px] ml-1 mr-3 pt-2 flex flex-row justify-center bg-gray-50 h-auto w-370 ${open ? "w-370 pl-5" : "w-418 "}`}>
+    <div className={`w-full min-h-screen bg-gradient-to-br from-orange-50 via-orange-100 to-gray-100 transition-all duration-500 ${open ? "pl-8" : "pl-4"} pr-8 py-8`}>
 
-      <div className=" pr-5 pl-5 justify-between flex flex-col">
-        <div className="flex p-5 justify-center  mb-0">
-          {/*<button className=" rounded-[5px] bg-gray-500 hover:bg-gray-600  text-white mr-[90px] m-1 pb-1 pr-5 pl-5 h-9 font-bold">
-            Category
-            <span>
+      <div className="max-w-7xl mx-auto">
+        {/* Hero Section */}
+        <div className="mb-8 text-center">
+          <h1 className="text-5xl font-bold bg-gradient-to-r from-orange-600 to-black bg-clip-text text-transparent mb-3">
+            Welcome to Our Store
+          </h1>
+          <p className="text-xl text-gray-700">Discover amazing products at unbeatable prices</p>
+        </div>
 
-              <IoIosArrowDown className="inline-block align-middle ml-5  hover:scale-125 transition-all" />
+        {/* Search and Filter Section */}
+        <div className="bg-white rounded-2xl shadow-xl p-6 mb-8 backdrop-blur-sm bg-opacity-90 border-2 border-orange-200">
+          <div className="flex flex-wrap gap-4 items-center justify-center">
+            <CategoryDropDd onCategoryChange={handleCategoryChange} />
 
+            <div className="flex-1 min-w-[300px] max-w-[500px]">
+              <input
+                value={input}
+                type="text"
+                onChange={(e) => setInput(e.target.value)}
+                className="w-full focus:outline-none focus:ring-2 focus:ring-orange-500 rounded-lg text-black bg-gray-100 px-4 py-3 border border-gray-300 transition-all"
+                placeholder="Search for amazing products..."
+              />
+            </div>
 
-
-            </span>
-          </button> */}
-          <CategoryDropDd onCategoryChange={handleCategoryChange} />
-
-          <input
-            value={input}
-            type="text"
-            onChange={(e) => setInput(e.target.value)}
-            className="  focus:outline-none rounded-l-md text-black bg-gray-200 pl-[5px] pr-[60px] pt-[0px] py-[1px]"
-            placeholder="Search for new products.."
-
-
-          />
-
-          <button className=" rounded-r-[5px] bg-gray-500 hover:bg-gray-600 color-black text-white p-2  font-bold">Search</button>
-          <div className="ml-25">
-            {/*<DrawerBaskit />*/}
-            <Dropdown buttonText={<FaShoppingBasket size={23} />}/>
-
-            
-
-
+            <button className="bg-gradient-to-r from-orange-600 to-orange-700 hover:from-orange-700 hover:to-black text-white px-6 py-3 font-bold rounded-lg transition-all shadow-lg hover:shadow-xl">
+              Search
+            </button>
           </div>
-          
         </div>
-         <hr className="border-black full-w my-6 border-0.5 mb-9"/>
-        <div className=" flex bg-white ">
-         
-          
 
+        {/* Products Section */}
+        <div className="bg-white rounded-2xl shadow-xl p-8 backdrop-blur-sm bg-opacity-90 border-2 border-orange-200">
+          <h2 className="text-3xl font-bold text-black mb-6">Featured Products</h2>
           <ProductCard searchTerm={input} category={category} />
-
-
-
         </div>
-
       </div>
 
 
